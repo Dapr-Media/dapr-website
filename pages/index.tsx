@@ -8,7 +8,7 @@ const Home: NextPage = () => {
     <>
       <VStack spacing={["48px", null, null, "56px"]}>
         <Text mt={["48px", null, null, "56px"]}>THANKS FOR VISITING US!</Text>
-        <DottedWeb width={["220px", "300px", null, "400px"]} />
+        <DottedWeb width={["220px", "300px", null, "400px"]} stroke="svg" />
         <Text>
           We are currently revamping our website.
           <br /> It will be back soon.

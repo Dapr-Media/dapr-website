@@ -34,6 +34,10 @@ const theme = extendTheme({
         default: "#000",
         _dark: "#fff",
       },
+      svg: {
+        default: "#000",
+        _dark: "#fff",
+      },
     },
   },
   fonts: {

@@ -34,7 +34,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <ChakraProvider theme={theme} resetCSS>
         <Container py="28px">
-          <ThemeSwitcher />
+          <ThemeSwitcher
+            display={["none", null, null, "flex"]}
+            pos="absolute"
+            top="60px"
+            left="5vw"
+          />
           <NavBar />
           <Component {...pageProps} />
         </Container>

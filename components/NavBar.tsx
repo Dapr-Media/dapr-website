@@ -1,9 +1,7 @@
 import { Flex, HStack, Link } from "@chakra-ui/react";
-import InstaIcon from "../assets/InstaIcon";
-import LinkedinIcon from "../assets/LinkedinIcon";
+import { InstaIcon, LinkedinIcon, TwitterIcon, YTIcon } from "../assets/Icons";
 import Logo from "../assets/Logo";
-import TwitterIcon from "../assets/TwitterIcon";
-import YTIcon from "../assets/YTIcon";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 export default function NavBar() {
   return (
@@ -19,28 +17,38 @@ export default function NavBar() {
       maxW="min-content"
       mx="auto"
     >
-      <Logo me={[0, null, null, "180px"]} mb={["48px", null, null, 0]} />
+      <Logo
+        me={[0, null, null, "180px"]}
+        mb={["48px", null, null, 0]}
+        fill="svg"
+      />
+      <ThemeSwitcher
+        display={["flex", null, null, "none"]}
+        pos="absolute"
+        top="60px"
+        right={["15vw", "32vw", null, null]}
+      />
       <HStack spacing="48px">
         <Link href="https://www.instagram.com/daprmedia/" target="_blank">
-          <InstaIcon />
+          <InstaIcon fill="svg" width="22px" height="22px" />
         </Link>
 
         <Link href="https://twitter.com/DaprMedia" target="_blank">
-          <TwitterIcon />
+          <TwitterIcon fill="svg" width="22px" height="22px" />
         </Link>
 
         <Link
           href="https://www.youtube.com/channel/UC1oOOUHWZKtWwPmQllIMt3g"
           target="_blank"
         >
-          <YTIcon />
+          <YTIcon fill="svg" width="22px" height="22px" />
         </Link>
 
         <Link
           href="https://www.linkedin.com/in/dapr-media-a44762232/"
           target="_blank"
         >
-          <LinkedinIcon />
+          <LinkedinIcon fill="svg" width="22px" height="22px" />
         </Link>
       </HStack>
     </Flex>

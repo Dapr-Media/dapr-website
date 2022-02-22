@@ -4,12 +4,12 @@ function DottedWeb({ ...rest }: BoxProps) {
     <Box
       as="svg"
       xmlns="http://www.w3.org/2000/svg"
-      fill="none"
       viewBox="0 0 404 208"
+      fill="none"
       {...rest}
     >
       <path
-        stroke="#000"
+        // stroke="#000"
         strokeDasharray="4 4"
         strokeLinecap="round"
         strokeMiterlimit="10"
@@ -17,7 +17,7 @@ function DottedWeb({ ...rest }: BoxProps) {
         d="M400.937 18.706v185.84a2.136 2.136 0 01-2.135 2.125H5.198a2.136 2.136 0 01-2.135-2.125V18.706"
       ></path>
       <path
-        stroke="#000"
+        // stroke="#000"
         strokeDasharray="4.02 4.02"
         strokeLinecap="round"
         strokeMiterlimit="10"
