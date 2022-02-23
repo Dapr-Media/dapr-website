@@ -1,12 +1,22 @@
 import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
+import type { GlobalStyleProps } from "@chakra-ui/theme-tools";
 
 const config: ThemeConfig = {
   initialColorMode: "light",
   useSystemColorMode: false,
 };
+const styles = {
+  global: (props: GlobalStyleProps) => ({
+    body: {
+      bg: mode("white", "#1A1A1A")(props),
+    },
+  }),
+};
 
 const theme = extendTheme({
   config,
+  styles,
   components: {
     Link: {
       baseStyle: {

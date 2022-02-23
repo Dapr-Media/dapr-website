@@ -30,25 +30,46 @@ export default function NavBar() {
       />
       <HStack spacing="48px">
         <Link href="https://www.instagram.com/daprmedia/" target="_blank">
-          <InstaIcon fill="svg" width="22px" height="22px" />
+          <InstaIcon
+            fill="svg"
+            width="22px"
+            height="22px"
+            transition="fill .5s"
+            _hover={{ fill: "url(#a)" }}
+          />
         </Link>
 
         <Link href="https://twitter.com/DaprMedia" target="_blank">
-          <TwitterIcon fill="svg" width="22px" height="22px" />
+          <TwitterIcon
+            fill="svg"
+            width="22px"
+            height="22px"
+            _hover={{ fill: "#00ACEE" }}
+          />
         </Link>
 
         <Link
           href="https://www.youtube.com/channel/UC1oOOUHWZKtWwPmQllIMt3g"
           target="_blank"
         >
-          <YTIcon fill="svg" width="22px" height="22px" />
+          <YTIcon
+            fill="svg"
+            width="22px"
+            height="22px"
+            _hover={{ fill: "#FF0000" }}
+          />
         </Link>
 
         <Link
           href="https://www.linkedin.com/in/dapr-media-a44762232/"
           target="_blank"
         >
-          <LinkedinIcon fill="svg" width="22px" height="22px" />
+          <LinkedinIcon
+            fill="svg"
+            width="22px"
+            height="22px"
+            _hover={{ fill: "#0E76A8" }}
+          />
         </Link>
       </HStack>
     </Flex>

@@ -1,24 +1,19 @@
 import {
   Box,
-  chakra,
-  CircularProgress,
   Flex,
-  FlexboxProps,
   FlexProps,
   useBreakpoint,
-  useBreakpointValue,
   useColorMode,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { MoonIcon, SunIcon } from "../assets/Icons";
 
-const MotionBox = chakra(motion.div);
+const MotionBox = motion(Box);
 
 export default function ThemeSwitcher({ ...rest }: FlexProps) {
   const { colorMode, toggleColorMode } = useColorMode();
   const bp = useBreakpoint();
-  console.log(bp);
 
   function getVariants() {
     switch (bp) {
@@ -54,14 +49,12 @@ export default function ThemeSwitcher({ ...rest }: FlexProps) {
       h={["50px", null, null, "min-content"]}
       p={["3px", null, null, "6px"]}
       onClick={setThings}
-      // justify={[!isOn ? "flex-start" : "flex-end"]}
-      // transition=".3s"
-      // justify="center"
       {...rest}
     >
       <MotionBox
         layout
         animate={colorMode}
+        transition={{ duration: 0.3 }}
         rounded="full"
         bg="daprRed"
         w={["19px", null, null, "38px"]}
