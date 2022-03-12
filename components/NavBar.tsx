@@ -18,8 +18,11 @@ export default function NavBar() {
       mx="auto"
     >
       <Logo
+        height={66}
+        width={66}
         me={[0, null, null, "180px"]}
         mb={["48px", null, null, 0]}
+        transition="fill .5s"
         fill="svg"
       />
       <ThemeSwitcher
@@ -44,6 +47,7 @@ export default function NavBar() {
             fill="svg"
             width="22px"
             height="22px"
+            transition="fill .5s"
             _hover={{ fill: "#00ACEE" }}
           />
         </Link>
@@ -56,6 +60,7 @@ export default function NavBar() {
             fill="svg"
             width="22px"
             height="22px"
+            transition="fill .5s"
             _hover={{ fill: "#FF0000" }}
           />
         </Link>
@@ -68,6 +73,7 @@ export default function NavBar() {
             fill="svg"
             width="22px"
             height="22px"
+            transition="fill .5s"
             _hover={{ fill: "#0E76A8" }}
           />
         </Link>

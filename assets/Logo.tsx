@@ -4,8 +4,6 @@ function Logo({ ...rest }: BoxProps) {
   return (
     <Box
       as="svg"
-      height={66}
-      width={66}
       xmlns="http://www.w3.org/2000/svg"
       data-name="Layer 1"
       viewBox="0 0 1787.53 1998.5"

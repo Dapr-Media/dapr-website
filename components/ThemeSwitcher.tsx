@@ -4,6 +4,7 @@ import {
   FlexProps,
   useBreakpoint,
   useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -22,13 +23,15 @@ export default function ThemeSwitcher({ ...rest }: FlexProps) {
       case "base":
         return {
           light: { y: 0 },
-          dark: { y: "22px" },
+          dark: {
+            y: "123%",
+          },
         };
 
       default:
         return {
           light: { x: 0 },
-          dark: { x: "48px" },
+          dark: { x: "124%" },
         };
     }
   }
@@ -45,6 +48,8 @@ export default function ThemeSwitcher({ ...rest }: FlexProps) {
       bg="bg"
       border="1px solid #FF3333"
       boxShadow="0px 0px 32px rgba(0, 0, 0, 0.04)"
+      justify={["center", null, null, "flex-start"]}
+      align={["flex-start", null, null, "center"]}
       w={["25px", null, null, "100px"]}
       h={["50px", null, null, "min-content"]}
       p={["3px", null, null, "6px"]}
@@ -60,16 +65,14 @@ export default function ThemeSwitcher({ ...rest }: FlexProps) {
         w={["19px", null, null, "38px"]}
         h={["19px", null, null, "38px"]}
         variants={variants}
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-      >
-        {!isOn ? (
+        p={["6px", null, null, 3]}
+        as={useColorModeValue(SunIcon, MoonIcon)}
+      />
+      {/* {!isOn ? (
           <SunIcon width={["6.5px", null, null, "14px"]} fill="#fff" />
         ) : (
           <MoonIcon width={["6.5px", null, null, "14px"]} fill="#1a1a1a" />
-        )}
-      </MotionBox>
+        )} */}
     </Flex>
   );
 }

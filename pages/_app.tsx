@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import { ChakraProvider, Container } from "@chakra-ui/react";
 import theme from "../utils/theme";
 import ThemeSwitcher from "../components/ThemeSwitcher";
+import { Chakra } from "../utils/Chakra";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -32,7 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
         <title>Dapr Media</title>
       </Head>
-      <ChakraProvider theme={theme} resetCSS>
+      <Chakra cookies={pageProps.cookies}>
         <Container py="28px">
           <ThemeSwitcher
             display={["none", null, null, "flex"]}
@@ -43,8 +44,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           <NavBar />
           <Component {...pageProps} />
         </Container>
-      </ChakraProvider>
+      </Chakra>
     </>
   );
 }
 export default MyApp;
+export { getServerSideProps } from "../utils/Chakra";
